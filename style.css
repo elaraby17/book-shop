@@ -1,28 +1,28 @@
-:root{
-    --primary-color: #00008B;
-    --pfont-color: #666;
+:root {
+    --primary-color: #46344e;
+    --pfont-color: #5a5560;
     --light-color: #f9f9f9;
     --light2-color: #f1f5f9;
-    --dark-color:#181818;
+    --dark-color: #181818;
 }
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+    font-family: "Poppins", sans-serif;
     background-color: var(--light2-color);
 }
 
-ul{
+ul {
     list-style: none;
 }
-a{
+a {
     text-decoration: none;
 }
-header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,12 +35,12 @@ header{
     background: var(--light2-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.logo img{
+.logo img {
     width: 90px;
     height: 50px;
     object-fit: cover;
 }
-header input{
+.header input {
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     border: 1px solid var(--light-color);
@@ -48,25 +48,24 @@ header input{
     color: var(--primary-color);
     font-weight: 500;
 }
-.dark header {
+.dark .header {
     background: var(--dark-color);
-    color: var(--light-color); 
+    color: var(--light-color);
 }
-.dark header input{
+.dark .header input {
     border: 1px solid var(--dark-color);
     color: var(--light-color);
 }
-.dark header input::placeholder{
+.dark .header input::placeholder {
     color: var(--light-color);
 }
-
-.dark .menu li a{
+.dark .menu li a {
     color: var(--light-color);
 }
-.dark .menu li a:hover{
+.dark .menu li a:hover {
     color: var(--primary-color);
 }
-.btn{
+.btn {
     padding: 12px 32px;
     font-size: 1rem;
     text-transform: uppercase;
@@ -76,12 +75,15 @@ header input{
     font-weight: 600;
     cursor: pointer;
 }
-.btn:hover{
+.btn:hover {
     background: transparent;
     color: var(--primary-color);
     transition: 0.3s ease;
 }
-.menu{
+aside {
+    position: relative;
+}
+.menu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,28 +92,57 @@ header input{
     height: 100vh;
     margin-top: 5.4em;
     padding: 2em;
+    padding-top: 4em;
     background-color: var(--light2-color);
     position: fixed;
-    left: 0;
     top: 0;
-    z-index: 100;
+    left: 0;
+    z-index: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: .5s ease;
 }
-.dark .menu{
+.dark .menu {
     background: var(--dark-color);
 }
-.menu li a{
+.menu li a {
     color: var(--pfont-color);
     font-weight: 500;
     text-transform: uppercase;
     border: 1px solid transparent;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
-.menu li a.active{
+.menu li a.active {
     color: var(--primary-color);
+    font-weight: 600;
     border-bottom: 1px solid var(--primary-color);
 }
-.menu li a:hover{
+.menu li a:hover {
     color: var(--primary-color);
-    transition: 0.3s ease;
+    font-weight: 600;
 }
+.menu i {
+    font-size: 1.2em;
+}
+.open {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1.5em;
+}
+.icon{
+    font-size: 1.4em;
+    color: var(--primary-color);
+}
+.menu.close .link {
+    display: none;
+}
+.menu.close{
+    width: 4.5em;
+    padding : 2em;
+    padding-top: 4em;
+    transition: 0.5s ease;
+}
+
+
