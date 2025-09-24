@@ -202,29 +202,30 @@ a {
     color: var(--light-color);
 }
 @media (max-width: 768px) {
-    html {
-        font-size: 14px;
-    }
+
     .menu {
         width: 10em;
-        margin-top: 5.9em;
     }
     .icon {
         font-size: 1em;
     }
+    .cards {
+        margin-left: 10em;
+    }
 }
 @media (max-width: 500px) {
-    html {
-        font-size: 10px;
-    }
+
     .header .search {
         display: none;
     }
     .menu {
         width: 8em;
-        margin-top: 7.2em;
+        
     }
     .icon {
         font-size: 0.8em;
+    }
+    .cards {
+        margin-left: 8em;
     }
 }
