@@ -22,6 +22,10 @@ ul {
 a {
     text-decoration: none;
 }
+.dark {
+    background: var(--dark-color);
+    color: var(--light-color);
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -80,7 +84,7 @@ a {
     color: var(--primary-color);
     transition: 0.3s ease;
 }
-aside {
+.menu-container {
     position: relative;
 }
 .menu {
@@ -99,7 +103,7 @@ aside {
     left: 0;
     z-index: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: .5s ease;
+    transition: 0.5s ease;
 }
 .dark .menu {
     background: var(--dark-color);
@@ -109,7 +113,7 @@ aside {
     font-weight: 500;
     text-transform: uppercase;
     border: 1px solid transparent;
-    transition: 0.5s ;
+    transition: 0.5s;
 }
 .menu li .link.active {
     color: var(--primary-color);
@@ -132,30 +136,95 @@ aside {
     cursor: pointer;
     font-size: 1.5em;
 }
-.icon{
+.icon {
     font-size: 1.3em;
     color: var(--primary-color);
 }
 .menu.close .link {
     display: none;
-    
 }
-.menu.close{
+.menu.close {
     width: 4.5em;
-    padding : 2em;
+    padding: 2em;
     padding-top: 4em;
     transition: 0.5s ease;
 }
 
-.yory{
-    width: 20em;
-    height: 30em;
-    margin-left: 30em;
-    margin-top: 6em;
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em;
+    margin-left: 15em;
+    margin-top: 4em;
 }
-
-.yoryimg{
+.card {
+    background-color: var(--light-color);
+    padding: .5;
+    border-radius: 1em;
+    width: 18em;
+    height: fit-content;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.card-img {
+    width: 100%;
+    height: 20em;
+}
+.card-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.card-info {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.card-info h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.card-info p {
+    color: var(--pfont-color);
+    font-weight: 500;
+}
+.dark .card {
+    background: var(--dark-color);
+}
+.dark .card-info h3 {
+    color: var(--light-color);
+}
+.dark .card-info p {
+    color: var(--light-color);
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    .menu {
+        width: 10em;
+        margin-top: 5.9em;
+    }
+    .icon {
+        font-size: 1em;
+    }
+}
+@media (max-width: 500px) {
+    html {
+        font-size: 10px;
+    }
+    .header .search {
+        display: none;
+    }
+    .menu {
+        width: 8em;
+        margin-top: 7.2em;
+    }
+    .icon {
+        font-size: 0.8em;
+    }
 }
